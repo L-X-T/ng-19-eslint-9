@@ -30,6 +30,28 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "@angular-eslint/no-empty-lifecycle-method": "warn",
+      "@angular-eslint/prefer-on-push-component-change-detection": "off",
+      "@typescript-eslint/naming-convention": [
+        "warn",
+        {
+          "selector": "variable",
+          "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+        }
+      ],
+      "@typescript-eslint/no-empty-function": "warn",
+      "@typescript-eslint/no-empty-interface": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "off",
+      "max-len": [
+        "warn",
+        {
+          "code": 120,
+          "comments": 160
+        }
+      ],
+      "no-console": "off",
+      "no-restricted-syntax": "off",
     },
   },
   {
@@ -38,6 +60,13 @@ module.exports = tseslint.config(
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
     ],
-    rules: {},
+    rules: {
+      "@angular-eslint/template/attributes-order": "off",
+      "@angular-eslint/template/button-has-type": "warn",
+      "@angular-eslint/template/prefer-control-flow": "warn",
+      "@angular-eslint/template/prefer-ngsrc": "warn",
+      "@angular-eslint/template/prefer-self-closing-tags": "warn",
+      "@angular-eslint/template/use-track-by-function": "warn"
+    },
   }
 );
